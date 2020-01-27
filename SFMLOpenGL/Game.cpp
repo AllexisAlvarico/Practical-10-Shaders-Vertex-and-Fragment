@@ -296,6 +296,7 @@ void Game::update()
 
 
 	cubeRotation();
+	unload();
 
 	////Change vertex data
 	//vertex[0].coordinate[0] += -0.0001f;
@@ -340,7 +341,7 @@ void Game::render()
 	// Set pointers for each parameter
 	// https://www.opengl.org/sdk/docs/man4/html/glVertexAttribPointer.xhtml
 	glVertexAttribPointer(positionID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-	glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (float*)NULL+3);
+	glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (float*)NULL+8);
 
 	//Enable Arrays
 	glEnableVertexAttribArray(positionID);
